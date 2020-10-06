@@ -1,11 +1,28 @@
 '''
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
+
+
+
+- if shows up twice, ignore
+- count occurances of each item, if count is 1, return that
+
+
+
 '''
 def single_number(arr):
     # Your code here
 
-    pass
+    for item in arr:
+        i = 0
+        count = 0
+        while i < len(arr):
+            if item == arr[i]:
+                count+=1
+            i+=1
+
+        if count == 1:
+            return item
 
 
 if __name__ == '__main__':
