@@ -4,8 +4,26 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    sliding_window = []
+    i=0
+    max_window = len(nums) - k + 1
+    while i < max_window:
+        window_values = []
+        #window = range i to i+k for loop
+        for num in nums[i:i+k]:
+            #find the numbers in window position and add them to temp array
+            window_values.append(num)
+        i+=1
 
-    pass
+        #find the max of the numbers in window position
+        max_value = max(window_values)
+        print(max_value)
+        sliding_window.append(max_value)
+
+    return sliding_window
+
+    # O(n*k) #O(n^2)
+    # visulize / think about this like square/rectangle
 
 
 if __name__ == '__main__':
@@ -14,3 +32,6 @@ if __name__ == '__main__':
     k = 3
 
     print(f"Output of sliding_window_max function is: {sliding_window_max(arr, k)}")
+
+    # Expected Output: [3,3,5,5,6,7] 
+
