@@ -21,7 +21,9 @@ def sliding_window_max(nums, k):
         sliding_window.append(max_value)
 
     return sliding_window
-    
+
+    # O(n*k) #O(n^2)
+    # visulize / think about this like square/rectangle
 
 
 if __name__ == '__main__':
